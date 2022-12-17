@@ -1,10 +1,18 @@
 package src.Pages.HomePageNeauthorizated.Register;
 
+import static src.Pages.CommandEnum.REGISTER;
+import static src.Pages.CommandEnum.getCommand;
+
+import java.util.Arrays;
+import java.util.List;
 import src.Input.ActionInput;
 import src.Pages.Command;
+import src.Pages.CommandEnum;
+import src.Pages.InterpretCommand;
 import src.Pages.Page;
 
 public class RegisterPage extends Page {
+	private List<CommandEnum> commands = Arrays.asList(REGISTER);
 
 	public RegisterPage() {
 		super();
@@ -14,14 +22,8 @@ public class RegisterPage extends Page {
 	}
 
 	public Command interpretCommand(ActionInput action) {
-		if (action.getFeature().equals("register")) {
-			return new RegisterCommand(action.getCredentials());
-		}
-
-		return new Command() {
-			@Override
-			public void execute() {
-			}
-		};
+		InterpretCommand interpreter = new InterpretCommand(action);
+		CommandEnum feature = getCommand(commands, action.getFeature());
+		return interpreter.interpret(feature);
 	}
 }

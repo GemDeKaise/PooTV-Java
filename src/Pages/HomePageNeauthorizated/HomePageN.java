@@ -1,22 +1,20 @@
 package src.Pages.HomePageNeauthorizated;
 
-import static src.PageNames.LOGIN;
-import static src.PageNames.REGISTER;
-import static src.PageNames.getPage;
+import static src.Pages.PageEnum.LOGIN;
+import static src.Pages.PageEnum.REGISTER;
+import static src.Pages.PageEnum.getPage;
 
 import java.util.Arrays;
 import java.util.List;
 import src.Input.ActionInput;
-import src.PageNames;
+import src.Pages.InvalidCommand;
+import src.Pages.PageEnum;
 import src.Pages.ChangePage;
 import src.Pages.Command;
-import src.Pages.HomePageNeauthorizated.LogIn.LoginPage;
-import src.Pages.HomePageNeauthorizated.Register.RegisterPage;
 import src.Pages.Page;
-import src.fileio.DataBase;
 
 public class HomePageN extends Page {
-	List<PageNames> pages = Arrays.asList(LOGIN, REGISTER);
+	List<PageEnum> pages = Arrays.asList(LOGIN, REGISTER);
 	public HomePageN() {
 		super();
 	}
@@ -27,12 +25,7 @@ public class HomePageN extends Page {
 	}
 
 	public Command interpretCommand(ActionInput action) {
-		return new Command() {
-			@Override
-			public void execute() {
-
-			}
-		};
+		return new InvalidCommand();
 	}
 
 }

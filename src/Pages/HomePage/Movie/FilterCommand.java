@@ -25,11 +25,11 @@ public class FilterCommand implements Command {
 	@Override
 	public void execute() {
 		ArrayList<Movie> movies;
-		DataBase db = DataBase.getInstance();
+		DataBase dataBase = DataBase.getInstance();
 		if (filters.getContains() != null)
-			movies = filterMovies(db.getCurrentMovies(), filters.getContains());
+			movies = filterMovies(dataBase.getCurrentMovies(), filters.getContains());
 		else
-			movies = db.getCurrentMovies();
+			movies = dataBase.getCurrentMovies();
 
 		if (filters.getSort() != null) {
 			sortMovies(movies, filters.getSort());
@@ -46,11 +46,23 @@ public class FilterCommand implements Command {
 		ArrayList<String> genres = contains.getGenres();
 
 		for (Movie movie: movies) {
-			if ((actors == null || actors.contains(movie.getActors())) &&
-				(genres == null || genres.contains(movie.getGenres()))) {
-				filteredMovies.add(movie);
+				if (actors != null) {
+								for (String actor: actors) {
+									if (movie.getActors().contains(actor)) {
+										filteredMovies.add(movie);
+										break;
+									}
+								}
+							}
+				if (genres != null) {
+					for (String genre: genres) {
+						if (movie.getGenres().contains(genre)) {
+							filteredMovies.add(movie);
+							break;
+						}
+					}
+				}
 			}
-		}
 		return filteredMovies;
 	}
 

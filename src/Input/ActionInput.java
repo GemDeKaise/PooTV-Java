@@ -14,6 +14,7 @@ public class ActionInput {
 	String page;
 	String movieName;
 	String startsWith;
+	String count;
 
 	Credentials credentials;
 

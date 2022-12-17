@@ -11,6 +11,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
 
+        DataBase.getInstance().destroy();
+
         Input input = objectMapper.readValue(new File(args[0]), Input.class);
 
         DataBase dataBase = DataBase.getInstance();
@@ -25,6 +27,5 @@ public class Main {
         objectWriter.writeValue(new File(args[1]), dataBase.getOutput());
 
         objectWriter.writeValue(new File(args[0].replace("/in", "/out")), dataBase.getOutput());
-        dataBase.destroy();
     }
 }

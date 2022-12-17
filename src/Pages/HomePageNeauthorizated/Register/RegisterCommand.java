@@ -27,7 +27,7 @@ public class RegisterCommand implements Command {
 				return;
 			}
 		}
-		User user = UserFactory.getUser(credentials);
+		User user = UserFactory.create(credentials, credentials.getAccountType());
 		database.getUsers().add(user);
 
 		database.getOutput().add(Print(user, null, null));

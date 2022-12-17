@@ -218,7 +218,37 @@
   }
 }, {
   "error" : null,
-  "currentMoviesList" : [ ],
+  "currentMoviesList" : [ {
+    "name" : "Lord, Save Us from Your Followers",
+    "year" : 1998,
+    "duration" : 125,
+    "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
+    "genres" : [ "Comedy", "Western", "Mystery" ],
+    "countriesBanned" : [ "Russia", "Saudi Arabia", "Zimbabwe" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Take the Money and Run",
+    "year" : 2006,
+    "duration" : 134,
+    "actors" : [ "Hailey Evequot", "Fenelia Maryott", "Gloriane Haughton", "Evvie Asbery", "Camey Ingold" ],
+    "genres" : [ "Thriller", "Western", "Mystery" ],
+    "countriesBanned" : [ "Indonesia", "China", "India" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "The Empty Hours",
+    "year" : 2003,
+    "duration" : 106,
+    "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan", "Camey Ingold" ],
+    "genres" : [ "Fantasy", "Thriller", "Mystery" ],
+    "countriesBanned" : [ "Indonesia", "Brazil", "Uganda" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  } ],
   "currentUser" : {
     "credentials" : {
       "name" : "Iancu",

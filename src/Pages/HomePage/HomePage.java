@@ -1,24 +1,21 @@
 package src.Pages.HomePage;
 
 import static src.fileio.Output.Print;
-import static src.PageNames.*;
+import static src.Pages.PageEnum.*;
 
 import java.util.Arrays;
 import java.util.List;
 import src.Input.ActionInput;
-import src.Input.Movie;
-import src.PageNames;
+import src.Pages.PageEnum;
 import src.Pages.ChangePage;
 import src.Pages.Command;
-import src.Pages.HomePage.Movie.MoviesPage;
 import src.Pages.Page;
 import src.Users.User;
 import src.fileio.DataBase;
-import java.util.ArrayList;
 
 public class HomePage extends Page {
 	protected User user;
-	List<PageNames> pages = Arrays.asList(LOGOUT, UPGRADES, MOVIES);
+	List<PageEnum> pages = Arrays.asList(LOGOUT, UPGRADES, MOVIES);
 
 	public HomePage(User user) {
 		super();

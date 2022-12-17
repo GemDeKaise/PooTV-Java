@@ -28,6 +28,7 @@ public class DataBase {
 	private DataBase() {
 		page = new HomePageN();
 		currentMovies = new ArrayList<Movie>();
+		users = new ArrayList<User>();
 		output = new ObjectMapper().createArrayNode();
 	}
 

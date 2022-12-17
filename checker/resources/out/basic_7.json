@@ -176,16 +176,6 @@
     "numLikes" : 0,
     "rating" : 0.0,
     "numRatings" : 0
-  }, {
-    "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
-    "duration" : 141,
-    "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
-    "genres" : [ "Comedy", "Mystery", "Drama" ],
-    "countriesBanned" : [ "China", "South Africa", "India" ],
-    "numLikes" : 0,
-    "rating" : 0.0,
-    "numRatings" : 0
   } ],
   "currentUser" : {
     "credentials" : {
