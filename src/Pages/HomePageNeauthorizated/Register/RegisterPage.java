@@ -1,6 +1,7 @@
 package src.Pages.HomePageNeauthorizated.Register;
 
 import src.Input.ActionInput;
+import src.Pages.Command;
 import src.Pages.Page;
 
 public class RegisterPage extends Page {
@@ -12,9 +13,15 @@ public class RegisterPage extends Page {
 	public void changePage(ActionInput action) {
 	}
 
-	public void interpretCommand(ActionInput action) {
+	public Command interpretCommand(ActionInput action) {
 		if (action.getFeature().equals("register")) {
-			setCommand(new RegisterCommand(action.getCredentials()));
+			return new RegisterCommand(action.getCredentials());
 		}
+
+		return new Command() {
+			@Override
+			public void execute() {
+			}
+		};
 	}
 }

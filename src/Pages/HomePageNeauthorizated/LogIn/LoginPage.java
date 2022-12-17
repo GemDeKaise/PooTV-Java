@@ -1,6 +1,8 @@
 package src.Pages.HomePageNeauthorizated.LogIn;
 
 import src.Input.ActionInput;
+import src.Pages.Command;
+import src.Pages.InvalidCommand;
 import src.Pages.Page;
 
 public class LoginPage extends Page {
@@ -11,10 +13,12 @@ public class LoginPage extends Page {
 	public void changePage(ActionInput action) {
 	}
 
-	public void interpretCommand(ActionInput action) {
+	public Command interpretCommand(ActionInput action) {
 		if (action.getFeature().equals("login")) {
-			setCommand(new LogInCommand(action.getCredentials()));
+			return new LogInCommand(action.getCredentials());
 		}
+
+		return new InvalidCommand();
 	}
 
 }

@@ -3,6 +3,14 @@
   "currentMoviesList" : [ ],
   "currentUser" : null
 }, {
+  "error" : "Error",
+  "currentMoviesList" : [ ],
+  "currentUser" : null
+}, {
+  "error" : "Error",
+  "currentMoviesList" : [ ],
+  "currentUser" : null
+}, {
   "error" : null,
   "currentMoviesList" : [ ],
   "currentUser" : {
@@ -29,16 +37,6 @@
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "countriesBanned" : [ "Russia", "Saudi Arabia", "Zimbabwe" ],
-    "numLikes" : 0,
-    "rating" : 0.0,
-    "numRatings" : 0
-  }, {
-    "name" : "My Sassy Girl",
-    "year" : 2005,
-    "duration" : 125,
-    "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher", "Camey Ingold" ],
-    "genres" : [ "Comedy", "Mystery", "Fantasy" ],
-    "countriesBanned" : [ "Dominican Republic", "Indonesia", "Japan" ],
     "numLikes" : 0,
     "rating" : 0.0,
     "numRatings" : 0
@@ -237,23 +235,9 @@
     "ratedMovies" : [ ]
   }
 }, {
-  "error" : null,
+  "error" : "Error",
   "currentMoviesList" : [ ],
-  "currentUser" : {
-    "credentials" : {
-      "name" : "Iancu",
-      "password" : "corega",
-      "accountType" : "standard",
-      "country" : "Japan",
-      "balance" : "50"
-    },
-    "tokensCount" : 0,
-    "numFreePremiumMovies" : 15,
-    "purchasedMovies" : [ ],
-    "watchedMovies" : [ ],
-    "likedMovies" : [ ],
-    "ratedMovies" : [ ]
-  }
+  "currentUser" : null
 }, {
   "error" : null,
   "currentMoviesList" : [ ],
@@ -273,23 +257,9 @@
     "ratedMovies" : [ ]
   }
 }, {
-  "error" : null,
+  "error" : "Error",
   "currentMoviesList" : [ ],
-  "currentUser" : {
-    "credentials" : {
-      "name" : "Iancu",
-      "password" : "corega",
-      "accountType" : "standard",
-      "country" : "Japan",
-      "balance" : "50"
-    },
-    "tokensCount" : 0,
-    "numFreePremiumMovies" : 15,
-    "purchasedMovies" : [ ],
-    "watchedMovies" : [ ],
-    "likedMovies" : [ ],
-    "ratedMovies" : [ ]
-  }
+  "currentUser" : null
 }, {
   "error" : null,
   "currentMoviesList" : [ ],
@@ -309,23 +279,13 @@
     "ratedMovies" : [ ]
   }
 }, {
-  "error" : null,
+  "error" : "Error",
   "currentMoviesList" : [ ],
-  "currentUser" : {
-    "credentials" : {
-      "name" : "Iancu",
-      "password" : "corega",
-      "accountType" : "standard",
-      "country" : "Japan",
-      "balance" : "50"
-    },
-    "tokensCount" : 0,
-    "numFreePremiumMovies" : 15,
-    "purchasedMovies" : [ ],
-    "watchedMovies" : [ ],
-    "likedMovies" : [ ],
-    "ratedMovies" : [ ]
-  }
+  "currentUser" : null
+}, {
+  "error" : "Error",
+  "currentMoviesList" : [ ],
+  "currentUser" : null
 }, {
   "error" : null,
   "currentMoviesList" : [ ],
@@ -344,4 +304,12 @@
     "likedMovies" : [ ],
     "ratedMovies" : [ ]
   }
+}, {
+  "error" : "Error",
+  "currentMoviesList" : [ ],
+  "currentUser" : null
+}, {
+  "error" : "Error",
+  "currentMoviesList" : [ ],
+  "currentUser" : null
 } ]

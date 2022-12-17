@@ -1,12 +1,16 @@
 package src.Pages.HomePage;
 
 import static src.fileio.Output.Print;
+import static src.PageNames.*;
 
+import java.util.Arrays;
+import java.util.List;
 import src.Input.ActionInput;
 import src.Input.Movie;
+import src.PageNames;
+import src.Pages.ChangePage;
 import src.Pages.Command;
-import src.Pages.HomePage.Movie.MoviePage;
-import src.Pages.HomePageNeauthorizated.HomePageN;
+import src.Pages.HomePage.Movie.MoviesPage;
 import src.Pages.Page;
 import src.Users.User;
 import src.fileio.DataBase;
@@ -14,6 +18,7 @@ import java.util.ArrayList;
 
 public class HomePage extends Page {
 	protected User user;
+	List<PageNames> pages = Arrays.asList(LOGOUT, UPGRADES, MOVIES);
 
 	public HomePage(User user) {
 		super();
@@ -21,41 +26,16 @@ public class HomePage extends Page {
 	}
 
 	public void changePage(ActionInput action) {
-		DataBase db = DataBase.getInstance();
-		if (action.getPage().equals("logout")) {
-			db.setPage(new HomePageN());
-		} else if (action.getPage().equals("movies")) {
-			ChangePageToMovie(action);
-		} else if (action.getPage().equals("upgrades")) {
-//			DataBase.getInstance().setPage(new UpgradesPage(user));
-		} else {
-			db.getOutput().add(Print(null, "Error", null));
-		}
+		ChangePage changePage = new ChangePage(action, user);
+		changePage.execute(getPage(pages, action.getPage()));
 	}
 
-	public void interpretCommand(ActionInput action) {
-		setCommand(new Command() {
+	public Command interpretCommand(ActionInput action) {
+		return new Command() {
 			@Override
 			public void execute() {
 				DataBase.getInstance().getOutput().add(Print(null, "Error", null));
 			}
-		});
-	}
-
-	private void ChangePageToMovie(ActionInput action) {
-		DataBase db = DataBase.getInstance();
-		db.setPage(new MoviePage(user, action.getMovieName()));
-	    db.setCurrentMovies(checkBan(db.getMovies()));
-		db.getOutput().add(Print(user, null, db.getCurrentMovies()));
-	}
-
-	private ArrayList<Movie> checkBan(ArrayList<Movie> movies) {
-		ArrayList<Movie> result = new ArrayList<Movie>();
-		for (Movie movie : movies) {
-			if (!movie.getCountriesBanned().contains(user.getCredentials().getCountry())) {
-				result.add(movie);
-			}
-		}
-		return result;
+		};
 	}
 }

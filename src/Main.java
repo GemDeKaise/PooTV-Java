@@ -24,7 +24,7 @@ public class Main {
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(args[1]), dataBase.getOutput());
 
-//        objectWriter.writeValue(new File(args[0].replace("/in", "/out")), dataBase.getOutput());
+        objectWriter.writeValue(new File(args[0].replace("/in", "/out")), dataBase.getOutput());
         dataBase.destroy();
     }
 }

@@ -1,5 +1,6 @@
 package src.Input;
 
+import src.Pages.Feature;
 import src.Pages.Page;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import src.fileio.DataBase;
@@ -10,8 +11,8 @@ public class ActionHandler {
 		if (action.getType().equals("change page")) {
 			page.changePage(action);
 		} else {
-			page.interpretCommand(action);
-			page.executeCommand();
+			Feature feature = new Feature(page.interpretCommand(action));
+			feature.execute();
 		}
 	}
 }
