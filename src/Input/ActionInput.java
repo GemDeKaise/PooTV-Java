@@ -12,9 +12,10 @@ public class ActionInput {
 	String type;
 	String feature;
 	String page;
-	String movieName;
+	String movie;
 	String startsWith;
 	String count;
+	int rate;
 
 	Credentials credentials;
 

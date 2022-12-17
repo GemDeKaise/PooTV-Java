@@ -8,11 +8,10 @@ import lombok.Setter;
 @Getter @Setter
 public class Filters {
 
-	private Sort sort;
-	private Contains contains;
+	private Sort sort = new Sort();
+	private Contains contains = new Contains();
 
 	public Filters() {
 	}
-
 
 }

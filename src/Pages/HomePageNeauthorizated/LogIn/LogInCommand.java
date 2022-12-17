@@ -1,6 +1,8 @@
 package src.Pages.HomePageNeauthorizated.LogIn;
 
 import static src.fileio.Output.Print;
+import static src.fileio.Output.PrintError;
+import static src.fileio.Output.PrintUser;
 
 import src.Input.Credentials;
 import src.Pages.Command;
@@ -28,14 +30,14 @@ public class LogInCommand implements Command {
 			if (userCredentials.getName().equals(credentials.getName())
 					&& userCredentials.getPassword().equals(credentials.getPassword())) {
 
-				dataBase.getOutput().add(Print(user, null, null));
+				PrintUser(user);
 				dataBase.setPage(new HomePage(user));
 
 				return;
 			}
 		}
 
-		dataBase.getOutput().add(Output.Print(null,"Error", null));
+		PrintError();
 		dataBase.setPage(new HomePageN());
 	}
 }

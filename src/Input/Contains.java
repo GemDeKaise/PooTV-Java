@@ -5,12 +5,11 @@ import java.util.ArrayList;
 import lombok.Getter;
 import lombok.Setter;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 @Getter @Setter
 public class Contains {
 
-	ArrayList<String> actors;
-	ArrayList<String> genres;
+	ArrayList<String> actors = new ArrayList<>();
+	ArrayList<String> genre = new ArrayList<>();
 
 	public Contains() {
 	}

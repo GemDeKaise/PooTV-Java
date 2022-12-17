@@ -1,5 +1,7 @@
 package src.Input;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -20,6 +22,9 @@ public class Movie {
 
 	private int numLikes;
 	private double rating;
+	@JsonIgnore
+	private int added;
+
 	private int numRatings;
 
 	public Movie() {

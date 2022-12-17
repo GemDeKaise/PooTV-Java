@@ -30,7 +30,7 @@ public class RegisterCommand implements Command {
 		User user = UserFactory.create(credentials, credentials.getAccountType());
 		database.getUsers().add(user);
 
-		database.getOutput().add(Print(user, null, null));
+		PrintUser(user);
 
 		database.setPage(new HomePage(user));
 	}

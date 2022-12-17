@@ -2,6 +2,7 @@ package src.Pages.HomePage;
 
 import static src.fileio.Output.Print;
 import static src.Pages.PageEnum.*;
+import static src.fileio.Output.PrintError;
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,7 +32,7 @@ public class HomePage extends Page {
 		return new Command() {
 			@Override
 			public void execute() {
-				DataBase.getInstance().getOutput().add(Print(null, "Error", null));
+				PrintError();
 			}
 		};
 	}

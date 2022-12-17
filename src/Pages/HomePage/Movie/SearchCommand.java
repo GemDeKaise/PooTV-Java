@@ -3,6 +3,7 @@ package src.Pages.HomePage.Movie;
 import static src.Pages.PageEnum.MOVIES;
 import static src.Pages.PageEnum.SEE_DETAILS;
 import static src.fileio.Output.Print;
+import static src.fileio.Output.PrintUser;
 
 import src.Input.Movie;
 import src.Pages.ChangePage;
@@ -32,10 +33,10 @@ public class SearchCommand implements Command {
 		}
 
 		if (result.size() == 0) {
-			DataBase.getInstance().getOutput().add(Print(user, null, null));
+			PrintUser(user);
 		} else {
 			DataBase.getInstance().setCurrentMovies(result);
-			DataBase.getInstance().getOutput().add(Print(user, null, result));
+			Print(user, result);
 		}
 
 		DataBase.getInstance().setPage(new MoviesPage(user));

@@ -1,10 +1,13 @@
 package src.Users;
+import static src.fileio.Output.PrintUserError;
+
 import lombok.Getter;
 import lombok.Setter;
 import src.Input.Movie;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import src.Input.Credentials;
 import java.util.ArrayList;
+import src.fileio.DataBase;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Getter @Setter
@@ -12,7 +15,7 @@ public class User {
 
 	protected Credentials credentials;
 
-	int tokensCount = 0;
+	Integer tokensCount = 0;
 	int numFreePremiumMovies = 15;
 
 	ArrayList<Movie> purchasedMovies = new ArrayList<>();
@@ -27,7 +30,14 @@ public class User {
 		this.credentials = credentials;
 	}
 
-	public void buyMovie() {
+	public void buyMovie(Movie movie) {
+	}
+
+	public boolean alreadyPurchased(Movie movie) {
+		if (!purchasedMovies.contains(movie))
+			return false;
+
+		return true;
 	}
 }
 
